@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql-core</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
     <url>https://github.com/Tag-SQL</url>
     <description> TagSQL purpose separate SQL script from Java code,  never hardcode or embed SQL script in Java,
@@ -30,7 +30,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
-        <maven.javadoc.skip>false</maven.javadoc.skip>
+        <mavcn.javadoc.skip>true</mavcn.javadoc.skip>
     </properties>
 
     <dependencies>
@@ -254,6 +254,7 @@
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-source-plugin</artifactId>
                             <version>3.0.1</version>
+
                             <executions>
                                 <execution>
                                     <id>attach-sources</id>

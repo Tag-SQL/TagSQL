@@ -6,14 +6,14 @@
     <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
 
-        <tagsql.core.version>0.1.0</tagsql.core.version>
+        <tagsql.core.version>0.1.1</tagsql.core.version>
         <spring-boot.version>2.5.1</spring-boot.version>
     </properties>
 
