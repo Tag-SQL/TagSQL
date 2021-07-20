@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.ixkit.tagsql</groupId>
+    <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql-core</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
@@ -91,7 +91,7 @@
     </issueManagement>
 
     <organization>
-        <name>net.ixkit.tagsql</name>
+        <name>io.github.tag-sql</name>
         <url>https://github.com/Tag-SQL</url>
     </organization>
 
@@ -135,7 +135,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossStoreRelease</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
@@ -274,12 +274,12 @@
         <snapshotRepository>
             <id>ossStoreRelease</id>
             <name>snapshots repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossStoreRelease</id>
             <name>release repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 

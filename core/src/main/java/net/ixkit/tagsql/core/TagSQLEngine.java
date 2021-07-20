@@ -99,11 +99,11 @@ public class TagSQLEngine {
     }
 
 
-    private String formatLineIfNeeds(String line, List paramters) {
+    private String formatLineIfNeeds(String line, List parameters) {
         if (isJsLine(line)) {
-            return formatByJavascriptFunction(line,paramters);
+            return formatByJavascriptFunction(line,parameters);
         }
-        return formatByParameters(line,paramters);
+        return formatByParameters(line,parameters);
     }
 
     private String formatByJavascriptFunction(String line, List KeyValuePairList) {

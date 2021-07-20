@@ -66,11 +66,16 @@ public class Tracer {
         if(null == target){
             return "null";
         }
-
-        Gson gson = new GsonBuilder()
-                .setPrettyPrinting()
-                .create();
-        String result = gson.toJson(target);
+        String result = "";
+        try {
+            Gson gson = new GsonBuilder()
+                    .setPrettyPrinting()
+                    .create();
+            result = gson.toJson(target);
+        }catch (Exception e){
+           //@ System.err.println("error toPrettyString:" +e.getMessage());
+            result = target.toString();
+        }
         return result;
 
     }
@@ -126,7 +131,7 @@ public class Tracer {
     }
 
     public static void warning(Object sender, String fmt, Object ... targets  ){
-        Console.warning.println("T->"+sender +","+ fmt +",");
+        Console.warning.println("⚠️->"+sender +","+ fmt +",");
         String buf = toBuf(Console.warning,targets);
         Console.warning.println(buf );
     }
@@ -142,7 +147,7 @@ public class Tracer {
             buffer.append(toPrettyString(targets[i])+",\n");
         }
         String buf = buffer.toString();
-        Console.err.println("T->"+sender +","+ fmt +","+ buf);
+        Console.err.println("🔥->"+sender +","+ fmt +","+ buf);
     }
 
 

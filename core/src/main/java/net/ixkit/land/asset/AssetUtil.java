@@ -11,13 +11,17 @@ import net.ixkit.land.runtime.Tracer;
 
 public class AssetUtil {
 
-    public static String load(Class<?> contextClass, String shortFileName){
+    public static String loadBaseClass(Class<?> contextClass, String shortFileName){
 
         String buf = null;
         try {
 
             String fileName = shortFileName;
             URL url =  contextClass.getResource(fileName);
+            if (null == url){
+                Tracer.warning("AssetUtil","Failed getResource", fileName);
+                return null;
+            }
             buf = Resources.toString(url, Charsets.UTF_8);
         } catch (IOException e) {
             e.printStackTrace();
@@ -29,8 +33,12 @@ public class AssetUtil {
 
         String buf = null;
         try {
-            URL url =  Thread.currentThread().getContextClassLoader().getResource(fileName);
-
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            URL url =  classLoader.getResource(fileName);
+            if (null == url){
+                Tracer.warning(AssetUtil.class,"Failed load",classLoader, fileName);
+                return "";
+            }
             buf = Resources.toString(url, Charsets.UTF_8);
         } catch (IOException e) {
             Tracer.e("AssetUtil","failed load",fileName);

@@ -9,3 +9,6 @@ GROUP  BY A.rank,
           A.first_name,
           A.last_name
 ORDER  BY A.score
+
+
+-- @ function

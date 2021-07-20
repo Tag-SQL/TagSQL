@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.ixkit.tagsql</groupId>
+    <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql</artifactId>
     <packaging>pom</packaging>
     <version>0.1.0</version>
@@ -19,7 +19,8 @@
 
     <modules>
         <module>core</module>
-        <module>example/simple</module>
+        <module>springboot-starter</module>
+        <module>example/spring-demo</module>
 
     </modules>
 
