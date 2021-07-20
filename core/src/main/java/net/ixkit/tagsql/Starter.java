@@ -30,10 +30,15 @@ public  class Starter   {
         String buf = AssetUtil.load("tagsql_logo.txt");
         System.out.println(buf);
         System.out.println("-----------------------------------");
-        System.out.println(":: TagSQL 🚀 :: ");
+        System.out.println(":: TagSQL 🚀 ::          " + getVersion()) ;
 
     }
     public static void  go(){
 
     }
+    public static String getVersion(){
+        String v = "0.1.0";
+        return "v("+ v + ")";
+    }
+
 }
