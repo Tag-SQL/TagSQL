@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * @version:0.1.0
  * @purpose:
  */
-@Component
+
 @ConfigurationProperties(prefix = "tag-sql", ignoreInvalidFields=true)
 public class Options {
     private String basePackage;
