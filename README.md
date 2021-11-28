@@ -22,7 +22,7 @@ Use by Springboot statrer
     <dependency>
     <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql-springboot-starter</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.5</version>
     </dependency>
     
 or directly:
@@ -30,5 +30,5 @@ or directly:
     <dependency>
     <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql-core</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.5</version>
     </dependency>
