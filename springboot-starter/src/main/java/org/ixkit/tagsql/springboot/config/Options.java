@@ -19,7 +19,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * @class:Options
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 19/07/2021 
  * @version:0.1.0
  * @purpose:
@@ -27,14 +27,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "tag-sql", ignoreInvalidFields=true)
 public class Options {
-    private String basePackage;
+    private String[] basePackage;
     private String mode;
 
-    public String getBasePackage() {
+    public String[] getBasePackage() {
         return basePackage;
     }
 
-    public Options setBasePackage(String basePackage) {
+    public Options setBasePackage(final String[] basePackage) {
         this.basePackage = basePackage;
         return  this;
     }

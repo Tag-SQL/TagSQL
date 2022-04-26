@@ -19,7 +19,7 @@ import java.lang.annotation.*;
 
 /**
  * @class:TagSQL
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 09/07/2021 
  * @version:0.1.0
  * @purpose:
@@ -27,7 +27,7 @@ import java.lang.annotation.*;
 
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
+@Target({ElementType.METHOD,ElementType.FIELD,ElementType.PARAMETER })
 public @interface TagSQL {
 
     String file();

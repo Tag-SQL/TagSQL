@@ -23,7 +23,7 @@ import java.util.*;
 
 /**
  * @Class:Parameters
- * @Author: RobinZ iRobinZhang@yahoo.com
+ * @Author: RobinZ iRobinZhang@hotmail.com
  * @Date: 02/07/2021
  * @Version:0.1.0
  * @Purpose:Parameters

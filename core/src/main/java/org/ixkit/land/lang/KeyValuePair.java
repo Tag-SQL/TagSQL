@@ -19,7 +19,7 @@ import org.ixkit.sql.Parameters;
 
 /**
  * @Class:KeyValuePair
- * @Author: RobinZ iRobinZhang@yahoo.com
+ * @Author: RobinZ iRobinZhang@hotmail.com
  * @Date: 02/07/2021 14:02
  * @Version:0.1.0
  * @Purpose:KeyValuePair: Key=>Value

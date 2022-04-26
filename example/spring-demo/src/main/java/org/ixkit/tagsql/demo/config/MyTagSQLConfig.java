@@ -17,14 +17,14 @@ public class MyTagSQLConfig implements PriorityOrdered {
 
     @Bean
     public static Options options() {
-        return new Options().setBasePackage("org.ixkit.tagsql.demo");
+        return new Options().setBasePackage(new String[]{"org.ixkit.tagsql.demo"});
     }
 
     // not auto config then
     //@Bean
     public ProviderConfigProcessor provider() {
         ProviderConfigProcessor result = new ProviderConfigProcessor() ;
-        result.setBasePackage("org.ixkit.tagsql.demo");
+        result.setBasePackage(new String[]{"org.ixkit.tagsql.demo"});
         result.setInterceptor(new Interceptor() {
             @Override
             public boolean onBeforeLoad(Field[] fields, Object[] args) {

@@ -21,7 +21,7 @@ import org.ixkit.tagsql.core.RuntimeOption;
 /**
  *
  * @Type: JavaScriptorFactory.java
- * @Author: RobinZ iRobinZhang@yahoo.com
+ * @Author: RobinZ iRobinZhang@hotmail.com
  * @Date: 01/07/2021 14:51
  * @Version
  * @Purpose:

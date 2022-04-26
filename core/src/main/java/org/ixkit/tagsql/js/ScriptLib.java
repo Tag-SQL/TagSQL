@@ -23,7 +23,7 @@ import java.io.File;
 /**
  *
  * @Type: ScriptLib.java
- * @Author: RobinZ iRobinZhang@yahoo.com
+ * @Author: RobinZ iRobinZhang@hotmail.com
  * @Date: 01/07/2021 14:47
  * @Version
  * @Purpose:

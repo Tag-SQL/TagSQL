@@ -17,8 +17,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <tagsql.core.version>0.1.5</tagsql.core.version>
-        <tagsql.springboot.starter.version>0.1.5</tagsql.springboot.starter.version>
+        <tagsql.core.version>0.1.7</tagsql.core.version>
+        <tagsql.springboot.starter.version>0.1.7</tagsql.springboot.starter.version>
         <spring-boot.version>2.5.1</spring-boot.version>
     </properties>
     <packaging>war</packaging>

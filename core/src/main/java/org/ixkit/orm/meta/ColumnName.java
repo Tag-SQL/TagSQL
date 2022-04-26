@@ -20,7 +20,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 /**
  * @class:ColumnName
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 07/07/2021 
  * @version:0.1.0
  * @purpose:

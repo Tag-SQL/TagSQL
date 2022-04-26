@@ -28,10 +28,11 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
 import java.lang.annotation.Annotation;
+import java.util.Arrays;
 
 /**
  * @class:ProvidrConfig
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 16/07/2021 
  * @version:0.1.0
  * @purpose:
@@ -40,7 +41,7 @@ import java.lang.annotation.Annotation;
 
 public class ProviderConfigProcessor implements BeanDefinitionRegistryPostProcessor {
     public static String TagSQLBuilder =  "TagSQLBuilder";
-    private String basePackage;
+    private String[] basePackage;
 
     private Class<? extends Annotation> annotation = Repository.class;
 
@@ -50,10 +51,12 @@ public class ProviderConfigProcessor implements BeanDefinitionRegistryPostProces
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
 
         registerRequestProxyHandler(registry);
+        Arrays.stream(this.basePackage).forEach(x->{
+            ClassPathScanner scanner = new ClassPathScanner(registry, annotation);
+            Tracer.debug(this,"Start scan 🔍 [" + x +"].......");
+            scanner.scan(StringUtils.tokenizeToStringArray(x, ConfigurableApplicationContext.CONFIG_LOCATION_DELIMITERS));
+        });
 
-        ClassPathScanner scanner = new ClassPathScanner(registry, annotation);
-        Tracer.debug(this,"Start scan 🔍 [" + this.basePackage +"].......");
-        scanner.scan(StringUtils.tokenizeToStringArray(this.basePackage, ConfigurableApplicationContext.CONFIG_LOCATION_DELIMITERS));
     }
 
     @Override
@@ -71,7 +74,7 @@ public class ProviderConfigProcessor implements BeanDefinitionRegistryPostProces
         this.annotation = annotation;
     }
 
-    public void setBasePackage(String basePackage) {
+    public void setBasePackage(String[] basePackage) {
         this.basePackage = basePackage;
     }
 

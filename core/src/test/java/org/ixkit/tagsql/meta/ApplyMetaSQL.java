@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * @class:AnnotationSQL
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 09/07/2021 
  * @version:0.1.0
  * @purpose:

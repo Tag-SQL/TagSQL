@@ -19,7 +19,7 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * @class:StringUtil
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 02/07/2021 
  * @version:0.1.0
  * @purpose:StringUtil

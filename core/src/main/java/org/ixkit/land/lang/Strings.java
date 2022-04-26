@@ -26,7 +26,7 @@ import java.util.List;
  * Project: tagsql
  * Package: org.ixkit.land.lang
  * @Type: Strings.java
- * @Author: RobinZ iRobinZhang@yahoo.com
+ * @Author: RobinZ iRobinZhang@hotmail.com
  * @Date: 01/07/2021 14:29
  * @Version
  *

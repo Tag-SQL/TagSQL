@@ -14,25 +14,50 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 @Configuration
 @ConditionalOnBean(annotation = EnableTagSQLAutoConfig.class)
 @EnableConfigurationProperties(Options.class)
 public class TagSQLAutoConfig {
 
-    private static String getBasePackage( Options options){
-        if(null == options || StringUtil.isEmpty(options.getBasePackage()) ) {
-            return "*";
+    private static String[] toBasePackage( Options options, boolean autoScanAll){
+        if(null == options ||  options.getBasePackage() == null ||  options.getBasePackage().length <=0) {
+            if ( autoScanAll) {
+                return new String[]{"*"};
+            }else{
+                return null;
+            }
         }
         return options.getBasePackage();
     }
     @Bean
     @ConditionalOnMissingBean
-    public static ProviderConfigProcessor provider(@Autowired ApplicationContext context, @Autowired Options options) {
+    public static ProviderConfigProcessor provider(@Autowired ApplicationContext context, @Autowired List<Options> options) {
+        boolean autoScanAll = null == options || options.size()<=1;
+        ArrayList<String> arrayList = new ArrayList<String>();
+       options.stream().forEach(x->{
+            String[] packages = toBasePackage(x,false);
+            if (null != packages){
+                Arrays.stream(packages).forEach(y->{
+                    arrayList.add(y);
+                });
+            }
+        });
+        Options mergedOptions = new Options();
+
+        String arrNew[] = new String[arrayList.size()];
+        for(int i = 0; i < arrNew.length; i++)
+            arrNew[i] = arrayList.get(i);
+
+        mergedOptions.setBasePackage(arrNew);
 
         ProviderConfigProcessor result = new ProviderConfigProcessor() ;
 
-        result.setBasePackage(getBasePackage(options));
+        result.setBasePackage(toBasePackage(mergedOptions,false));
 
         result.setInterceptor(new Interceptor() {
             @Override

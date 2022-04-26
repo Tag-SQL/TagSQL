@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql-springboot-starter</artifactId>
-    <version>0.1.5</version>
+    <version>0.1.7</version>
     <packaging>jar</packaging>
     <url>https://github.com/Tag-SQL</url>
     <description> Spring boot starter for TagSQL 🚀 </description>
@@ -25,7 +25,7 @@
     </parent>
 
     <properties>
-        <tagsql.core.version>0.1.5</tagsql.core.version>
+        <tagsql.core.version>0.1.7</tagsql.core.version>
         <spring-boot.version>2.5.1</spring-boot.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,6 +44,11 @@
             <artifactId>tagsql-core</artifactId>
             <version>${tagsql.core.version}</version>
 
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.8</version>
         </dependency>
     </dependencies>
     <scm>
@@ -65,7 +70,7 @@
         <developer>
             <id>RobinByte</id>
             <name>Robin Z</name>
-            <email>iRobinZhang@yahoo.com</email>
+            <email>iRobinZhang@hotmail.com</email>
             <url>https://github.com/Tag-SQL</url>
             <timezone>+8</timezone>
         </developer>

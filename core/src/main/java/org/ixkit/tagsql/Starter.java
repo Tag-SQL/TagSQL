@@ -19,7 +19,7 @@ import org.ixkit.land.asset.AssetUtil;
 
 /**
  * @class:Starter
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 19/07/2021 
  * @version:0.1.0
  * @purpose:

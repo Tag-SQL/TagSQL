@@ -22,7 +22,7 @@ import org.ixkit.asset.properties.meta.aop.PropertiesProcessor;
 
 /**
  * @class:SQLProvider
- * @author: RobinZ iRobinZhang@yahoo.com
+ * @author: RobinZ iRobinZhang@hotmail.com
  * @date: 09/07/2021 
  * @version:0.1.0
  * @purpose:

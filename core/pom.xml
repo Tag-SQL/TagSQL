@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.tag-sql</groupId>
     <artifactId>tagsql-core</artifactId>
-    <version>0.1.5</version>
+    <version>0.1.7</version>
     <packaging>jar</packaging>
     <url>https://github.com/Tag-SQL</url>
     <description> TagSQL purpose separate SQL script from Java code,  never hardcode or embed SQL script in Java,
@@ -99,7 +99,7 @@
         <developer>
             <id>RobinByte</id>
             <name>Robin Z</name>
-            <email>iRobinZhang@yahoo.com</email>
+            <email>iRobinZhang@hotmail.com</email>
             <url>https://github.com/Tag-SQL</url>
             <timezone>+8</timezone>
         </developer>
